@@ -309,7 +309,13 @@ export default function MediaPage() {
                 street buntings across Sabah, Sarawak, and Labuan. Find the
                 perfect location for your advertising campaign.
               </p>
-              <div className="w-16 h-1 bg-accent mx-auto"></div>
+              <div className="w-16 h-1 bg-accent mx-auto mb-6"></div>
+              <Link
+                href="/media/packages"
+                className="btn-primary inline-block"
+              >
+                View Package Pricing
+              </Link>
             </div>
           </ScrollAnimation>
         </div>
@@ -586,7 +592,7 @@ export default function MediaPage() {
                   </li>
                 </ul>
                 <Link
-                  href="/contact"
+                  href="/media/packages"
                   className="inline-block bg-white text-accent px-6 py-2.5 text-sm rounded-md hover:bg-gray-100 transition-all duration-300 font-medium"
                 >
                   View Package Pricing

@@ -288,7 +288,13 @@ export default function EventEquipmentPage() {
                 rent. From canopies and furniture to stages, LED screens, and
                 sound systems — everything you need for a successful event.
               </p>
-              <div className="w-16 h-1 bg-accent mx-auto"></div>
+              <div className="w-16 h-1 bg-accent mx-auto mb-6"></div>
+              <Link
+                href="/event-equipment/packages"
+                className="btn-primary inline-block"
+              >
+                View Package Pricing
+              </Link>
             </div>
           </ScrollAnimation>
         </div>
@@ -535,10 +541,10 @@ export default function EventEquipmentPage() {
                   </li>
                 </ul>
                 <Link
-                  href="/contact"
+                  href="/event-equipment/packages"
                   className="inline-block bg-white text-accent px-6 py-2.5 text-sm rounded-md hover:bg-gray-100 transition-all duration-300 font-medium"
                 >
-                  Request Package Quote
+                  View Package Pricing
                 </Link>
               </div>
             </ScrollAnimation>
