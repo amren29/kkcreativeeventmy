@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
 const equipmentInventory = [
@@ -13,7 +14,7 @@ const equipmentInventory = [
     size: "10ft x 10ft",
     capacity: "8-10 people",
     price: "RM 150/day",
-    image: "/placeholder-canopy.jpg",
+    image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop",
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const equipmentInventory = [
     size: "20ft x 20ft",
     capacity: "30-40 people",
     price: "RM 400/day",
-    image: "/placeholder-canopy.jpg",
+    image: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&h=600&fit=crop",
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const equipmentInventory = [
     size: "40ft x 60ft",
     capacity: "200+ people",
     price: "RM 2,500/day",
-    image: "/placeholder-canopy.jpg",
+    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop",
   },
   {
     id: 4,
@@ -40,7 +41,7 @@ const equipmentInventory = [
     size: "12ft x 12ft",
     capacity: "10-15 people",
     price: "RM 200/day",
-    image: "/placeholder-canopy.jpg",
+    image: "https://images.unsplash.com/photo-1530221568434-ee716d54fa78?w=800&h=600&fit=crop",
   },
 
   // Chairs
@@ -51,7 +52,7 @@ const equipmentInventory = [
     size: "Standard size",
     capacity: "Per unit",
     price: "RM 5/day",
-    image: "/placeholder-chair.jpg",
+    image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=800&h=600&fit=crop",
   },
   {
     id: 6,
@@ -60,7 +61,7 @@ const equipmentInventory = [
     size: "Premium style",
     capacity: "Per unit",
     price: "RM 12/day",
-    image: "/placeholder-chair.jpg",
+    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=600&fit=crop",
   },
   {
     id: 7,
@@ -69,7 +70,7 @@ const equipmentInventory = [
     size: "Padded comfort",
     capacity: "Per unit",
     price: "RM 8/day",
-    image: "/placeholder-chair.jpg",
+    image: "https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=800&h=600&fit=crop",
   },
   {
     id: 8,
@@ -78,7 +79,7 @@ const equipmentInventory = [
     size: "Luxury seating",
     capacity: "Per unit",
     price: "RM 25/day",
-    image: "/placeholder-chair.jpg",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
   },
 
   // Tables
@@ -89,7 +90,7 @@ const equipmentInventory = [
     size: "5ft diameter",
     capacity: "8-10 seats",
     price: "RM 35/day",
-    image: "/placeholder-table.jpg",
+    image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=800&h=600&fit=crop",
   },
   {
     id: 10,
@@ -98,7 +99,7 @@ const equipmentInventory = [
     size: "6ft x 3ft",
     capacity: "6-8 seats",
     price: "RM 30/day",
-    image: "/placeholder-table.jpg",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&h=600&fit=crop",
   },
   {
     id: 11,
@@ -107,7 +108,7 @@ const equipmentInventory = [
     size: "3ft diameter",
     capacity: "Standing 4-6",
     price: "RM 25/day",
-    image: "/placeholder-table.jpg",
+    image: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&h=600&fit=crop",
   },
   {
     id: 12,
@@ -116,7 +117,7 @@ const equipmentInventory = [
     size: "8ft x 2.5ft",
     capacity: "Registration use",
     price: "RM 40/day",
-    image: "/placeholder-table.jpg",
+    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop",
   },
 
   // Stage
@@ -127,7 +128,7 @@ const equipmentInventory = [
     size: "8ft x 8ft",
     capacity: "Small events",
     price: "RM 300/day",
-    image: "/placeholder-stage.jpg",
+    image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&h=600&fit=crop",
   },
   {
     id: 14,
@@ -136,7 +137,7 @@ const equipmentInventory = [
     size: "16ft x 12ft",
     capacity: "Medium events",
     price: "RM 600/day",
-    image: "/placeholder-stage.jpg",
+    image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&h=600&fit=crop",
   },
   {
     id: 15,
@@ -145,7 +146,7 @@ const equipmentInventory = [
     size: "24ft x 20ft",
     capacity: "Large events",
     price: "RM 1,200/day",
-    image: "/placeholder-stage.jpg",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop",
   },
   {
     id: 16,
@@ -154,7 +155,7 @@ const equipmentInventory = [
     size: "20ft x 16ft + backdrop",
     capacity: "Corporate events",
     price: "RM 1,800/day",
-    image: "/placeholder-stage.jpg",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
   },
 
   // LED Screen
@@ -165,7 +166,7 @@ const equipmentInventory = [
     size: "6ft x 4ft",
     capacity: "Small to medium venue",
     price: "RM 800/day",
-    image: "/placeholder-led.jpg",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
   },
   {
     id: 18,
@@ -174,7 +175,7 @@ const equipmentInventory = [
     size: "10ft x 8ft",
     capacity: "Large outdoor events",
     price: "RM 1,500/day",
-    image: "/placeholder-led.jpg",
+    image: "https://images.unsplash.com/photo-1496024840928-4c417adf211d?w=800&h=600&fit=crop",
   },
   {
     id: 19,
@@ -183,7 +184,7 @@ const equipmentInventory = [
     size: "16ft x 10ft",
     capacity: "Concert/festival",
     price: "RM 3,000/day",
-    image: "/placeholder-led.jpg",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=600&fit=crop",
   },
   {
     id: 20,
@@ -192,7 +193,7 @@ const equipmentInventory = [
     size: "12ft x 8ft (mobile)",
     capacity: "Roadshow/activation",
     price: "RM 2,500/day",
-    image: "/placeholder-led.jpg",
+    image: "https://images.unsplash.com/photo-1531190260877-c8d11eb5afaf?w=800&h=600&fit=crop",
   },
 
   // Sound and Light
@@ -203,7 +204,7 @@ const equipmentInventory = [
     size: "2 speakers + mixer",
     capacity: "50-100 people",
     price: "RM 350/day",
-    image: "/placeholder-sound.jpg",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=600&fit=crop",
   },
   {
     id: 22,
@@ -212,7 +213,7 @@ const equipmentInventory = [
     size: "4 speakers + subwoofer",
     capacity: "200-500 people",
     price: "RM 800/day",
-    image: "/placeholder-sound.jpg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
   },
   {
     id: 23,
@@ -221,7 +222,7 @@ const equipmentInventory = [
     size: "Line array + full setup",
     capacity: "1000+ people",
     price: "RM 3,500/day",
-    image: "/placeholder-sound.jpg",
+    image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=800&h=600&fit=crop",
   },
   {
     id: 24,
@@ -230,7 +231,7 @@ const equipmentInventory = [
     size: "LED PAR lights (8pcs)",
     capacity: "Small events",
     price: "RM 400/day",
-    image: "/placeholder-light.jpg",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop",
   },
   {
     id: 25,
@@ -239,7 +240,7 @@ const equipmentInventory = [
     size: "Moving heads + effects",
     capacity: "Medium to large events",
     price: "RM 1,200/day",
-    image: "/placeholder-light.jpg",
+    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&h=600&fit=crop",
   },
   {
     id: 26,
@@ -248,7 +249,7 @@ const equipmentInventory = [
     size: "Full production package",
     capacity: "Large scale events",
     price: "RM 5,000/day",
-    image: "/placeholder-sound.jpg",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=600&fit=crop",
   },
 ];
 
@@ -374,23 +375,13 @@ export default function EventEquipmentPage() {
               >
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 group">
                   {/* Image */}
-                  <div className="relative bg-gray-200 h-48 flex items-center justify-center overflow-hidden">
-                    <div className="text-gray-400 text-center p-4">
-                      <svg
-                        className="w-16 h-16 mx-auto mb-2 text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                        />
-                      </svg>
-                      <p className="text-xs">{item.type}</p>
-                    </div>
+                  <div className="relative bg-gray-200 h-48 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                     {/* Type Badge */}
                     <div className="absolute top-2 left-2">
                       <span className="bg-accent text-white text-xs px-2 py-1 rounded">

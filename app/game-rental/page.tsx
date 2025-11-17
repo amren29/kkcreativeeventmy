@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
 const gameInventory = [
@@ -13,7 +14,7 @@ const gameInventory = [
     size: "Standard size",
     capacity: "1 player",
     price: "RM 400/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=800&h=600&fit=crop",
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const gameInventory = [
     size: "6ft x 3ft",
     capacity: "2 players",
     price: "RM 350/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=800&h=600&fit=crop",
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const gameInventory = [
     size: "Standard arcade size",
     capacity: "1-2 players",
     price: "RM 450/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
   },
   {
     id: 4,
@@ -40,7 +41,7 @@ const gameInventory = [
     size: "Racing seat + screen",
     capacity: "1 player",
     price: "RM 600/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop",
   },
 
   // Carnival Games
@@ -51,7 +52,7 @@ const gameInventory = [
     size: "Portable booth",
     capacity: "Multiple players",
     price: "RM 200/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&h=600&fit=crop",
   },
   {
     id: 6,
@@ -60,7 +61,7 @@ const gameInventory = [
     size: "Foldable boards",
     capacity: "2-4 players",
     price: "RM 150/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop",
   },
   {
     id: 7,
@@ -69,7 +70,7 @@ const gameInventory = [
     size: "4ft tall blocks",
     capacity: "2+ players",
     price: "RM 180/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=800&h=600&fit=crop",
   },
   {
     id: 8,
@@ -78,7 +79,7 @@ const gameInventory = [
     size: "Wall-mounted board",
     capacity: "Multiple players",
     price: "RM 250/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop",
   },
 
   // Sports Games
@@ -89,7 +90,7 @@ const gameInventory = [
     size: "5ft x 3ft",
     capacity: "2-4 players",
     price: "RM 300/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1599430389289-ccae1c4cf24d?w=800&h=600&fit=crop",
   },
   {
     id: 10,
@@ -98,7 +99,7 @@ const gameInventory = [
     size: "7ft standard",
     capacity: "2 players",
     price: "RM 500/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1604472315034-110569c2f26d?w=800&h=600&fit=crop",
   },
   {
     id: 11,
@@ -107,7 +108,7 @@ const gameInventory = [
     size: "Full size table",
     capacity: "2-4 players",
     price: "RM 350/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=800&h=600&fit=crop",
   },
   {
     id: 12,
@@ -116,7 +117,7 @@ const gameInventory = [
     size: "9-hole course",
     capacity: "Multiple players",
     price: "RM 800/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1530028828-25e8270793c5?w=800&h=600&fit=crop",
   },
 
   // Interactive Games
@@ -127,7 +128,7 @@ const gameInventory = [
     size: "VR headset + controllers",
     capacity: "1 player",
     price: "RM 700/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1617802690658-1173a812650d?w=800&h=600&fit=crop",
   },
   {
     id: 14,
@@ -136,7 +137,7 @@ const gameInventory = [
     size: "Console + TV + controllers",
     capacity: "1-4 players",
     price: "RM 400/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?w=800&h=600&fit=crop",
   },
   {
     id: 15,
@@ -145,7 +146,7 @@ const gameInventory = [
     size: "Dance pad + screen",
     capacity: "1-2 players",
     price: "RM 550/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1574701148212-8518049c7b2c?w=800&h=600&fit=crop",
   },
   {
     id: 16,
@@ -154,7 +155,7 @@ const gameInventory = [
     size: "Booth + camera + printer",
     capacity: "Multiple users",
     price: "RM 600/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop",
   },
 
   // Bouncy & Inflatable
@@ -165,7 +166,7 @@ const gameInventory = [
     size: "15ft x 15ft",
     capacity: "5-8 kids",
     price: "RM 500/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
   },
   {
     id: 18,
@@ -174,7 +175,7 @@ const gameInventory = [
     size: "30ft x 12ft",
     capacity: "Multiple participants",
     price: "RM 1,200/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop",
   },
   {
     id: 19,
@@ -183,7 +184,7 @@ const gameInventory = [
     size: "20ft height",
     capacity: "1 at a time",
     price: "RM 800/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1512850183-6d7990f42385?w=800&h=600&fit=crop",
   },
   {
     id: 20,
@@ -192,7 +193,7 @@ const gameInventory = [
     size: "6-10 bubble suits",
     capacity: "6-10 players",
     price: "RM 900/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&h=600&fit=crop",
   },
 
   // Board & Party Games
@@ -203,7 +204,7 @@ const gameInventory = [
     size: "3ft pieces",
     capacity: "2 players",
     price: "RM 250/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&h=600&fit=crop",
   },
   {
     id: 22,
@@ -212,7 +213,7 @@ const gameInventory = [
     size: "4ft tall",
     capacity: "2 players",
     price: "RM 200/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1611371805429-8b5c1b2c34ba?w=800&h=600&fit=crop",
   },
   {
     id: 23,
@@ -221,7 +222,7 @@ const gameInventory = [
     size: "Screen + microphones",
     capacity: "Multiple singers",
     price: "RM 450/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=600&fit=crop",
   },
   {
     id: 24,
@@ -230,7 +231,7 @@ const gameInventory = [
     size: "10+ popular games",
     capacity: "Various",
     price: "RM 150/day",
-    image: "/placeholder-game.jpg",
+    image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=800&h=600&fit=crop",
   },
 ];
 
@@ -356,29 +357,13 @@ export default function GameRentalPage() {
               >
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 group">
                   {/* Image */}
-                  <div className="relative bg-gray-200 h-48 flex items-center justify-center overflow-hidden">
-                    <div className="text-gray-400 text-center p-4">
-                      <svg
-                        className="w-16 h-16 mx-auto mb-2 text-gray-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <p className="text-xs">{item.type}</p>
-                    </div>
+                  <div className="relative bg-gray-200 h-48 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                     {/* Type Badge */}
                     <div className="absolute top-2 left-2">
                       <span className="bg-accent text-white text-xs px-2 py-1 rounded">
