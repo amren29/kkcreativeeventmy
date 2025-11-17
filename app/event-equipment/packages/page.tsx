@@ -15,13 +15,9 @@ const packages = [
     features: [
       "Basic sound system (up to 100 people)",
       "2 wireless microphones",
-      "Basic stage lighting (4 LED spotlights)",
       "Small stage setup (8ft x 8ft)",
-      "Registration table & chairs (2 sets)",
-      "Basic PA system",
-      "Setup & breakdown by 1 technician",
-      "Suitable for indoor venues",
-      "Delivery within KK area",
+      "Registration table & chairs",
+      "Setup & breakdown included",
     ],
     highlighted: false,
     guestCount: "Up to 100 guests",
@@ -34,17 +30,11 @@ const packages = [
     description: "Ideal for medium-sized corporate events, weddings, and community functions",
     features: [
       "Professional sound system (up to 300 people)",
-      "4 wireless microphones + 2 lapel mics",
-      "Professional stage lighting package",
-      "Medium stage setup (16ft x 12ft)",
-      "LED screen display (optional)",
-      "10x10ft canopy tent (2 units)",
-      "Registration counter with backdrop",
+      "4 wireless + 2 lapel microphones",
+      "Stage lighting & setup (16ft x 12ft)",
+      "LED screen display",
       "Tables & chairs (up to 200 pax)",
-      "Setup & management by 2 technicians",
-      "Generator backup available",
-      "Delivery across Sabah",
-      "On-site technical support",
+      "2 technicians + on-site support",
     ],
     highlighted: true,
     badge: "Most Popular",
@@ -58,23 +48,11 @@ const packages = [
     description: "Complete solution for large-scale events, concerts, festivals, and major corporate functions",
     features: [
       "High-end sound system (1000+ people)",
-      "8 wireless microphones + lapel mics + podium mics",
-      "Professional concert-grade lighting system",
-      "Moving head lights & special effects",
-      "Large stage setup (24ft x 20ft) with runway",
-      "Large LED screen display with live streaming setup",
-      "Multiple 10x10ft canopy tents (10 units)",
-      "VIP lounge furniture setup",
-      "Registration counters (3 stations) with branded backdrop",
-      "Complete furniture package (up to 1000 pax)",
-      "Truss system & rigging",
-      "Professional mixing console",
-      "Setup & management by 4 technicians + 1 coordinator",
-      "Generator & backup power systems",
-      "Delivery & setup across Sabah & Sarawak",
-      "Full-day on-site technical team",
-      "Rehearsal setup included",
-      "Insurance coverage included",
+      "8 microphones + concert-grade lighting",
+      "Large stage (24ft x 20ft) + LED screen",
+      "Complete furniture (up to 1000 pax)",
+      "4 technicians + coordinator",
+      "Generator, rehearsal & insurance included",
     ],
     highlighted: false,
     guestCount: "300-1000+ guests",
@@ -195,7 +173,7 @@ export default function EventEquipmentPackagesPage() {
                 delay={index * 100}
               >
                 <div
-                  className={`relative rounded-lg overflow-hidden transition-all duration-300 h-full flex flex-col ${
+                  className={`relative rounded-lg overflow-hidden transition-all duration-300 flex flex-col ${
                     pkg.highlighted
                       ? "bg-accent text-white shadow-2xl scale-105 md:scale-110"
                       : "bg-white border-2 border-gray-200 hover:border-accent hover:shadow-xl"
@@ -207,7 +185,7 @@ export default function EventEquipmentPackagesPage() {
                     </div>
                   )}
 
-                  <div className="p-8 flex-grow flex flex-col">
+                  <div className="p-6 flex flex-col">
                     {/* Package Name */}
                     <h3
                       className={`text-2xl font-bold mb-2 ${
@@ -246,7 +224,7 @@ export default function EventEquipmentPackagesPage() {
 
                     {/* Description */}
                     <p
-                      className={`mb-6 text-sm ${
+                      className={`mb-4 text-sm ${
                         pkg.highlighted ? "text-gray-100" : "text-textGray"
                       }`}
                     >
@@ -254,7 +232,7 @@ export default function EventEquipmentPackagesPage() {
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-3 mb-8 flex-grow">
+                    <ul className="space-y-2 mb-6">
                       {pkg.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
                           <svg

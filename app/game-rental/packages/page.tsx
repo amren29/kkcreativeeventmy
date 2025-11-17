@@ -15,11 +15,9 @@ const packages = [
     features: [
       "5 carnival games of your choice",
       "1 staff to manage games",
-      "Basic setup & breakdown",
-      "Suitable for 50-100 guests",
-      "Game prizes included (basic tier)",
-      "Delivery within KK area",
+      "Basic prizes included",
       "4 hours rental period",
+      "Setup & delivery included",
     ],
     highlighted: false,
     guestCount: "50-100 guests",
@@ -31,15 +29,11 @@ const packages = [
     duration: "Full Day (8 hours)",
     description: "Ideal for corporate events, school functions, and community gatherings",
     features: [
-      "10 carnival games of your choice",
-      "3 interactive game stations",
+      "10 carnival games + 3 interactive stations",
       "2 staff members to manage games",
-      "Professional setup & breakdown",
-      "Suitable for 100-300 guests",
-      "Premium game prizes included",
-      "Delivery across Sabah",
+      "Premium prizes + scoreboard system",
       "8 hours rental period",
-      "Game scoreboard system",
+      "Professional setup & delivery",
       "Photo booth add-on available",
     ],
     highlighted: true,
@@ -53,20 +47,12 @@ const packages = [
     duration: "Full Day + (10 hours)",
     description: "Complete entertainment solution for large festivals, exhibitions, and major events",
     features: [
-      "20 carnival games & attractions",
-      "5 premium interactive game stations",
-      "Giant inflatable games (2 units)",
-      "Virtual reality gaming zone",
-      "4 staff members + 1 coordinator",
-      "Professional setup with custom branding",
-      "Suitable for 300-1000 guests",
-      "Deluxe prize packages",
-      "Delivery & setup across Sabah & Sarawak",
+      "20 carnival games + 5 interactive stations",
+      "Giant inflatables + VR gaming zone",
+      "4 staff + coordinator",
+      "Deluxe prizes + digital leaderboard",
       "10 hours rental period",
-      "Digital leaderboard system",
-      "Professional photo booth included",
-      "Social media content creation support",
-      "Insurance coverage included",
+      "Photo booth, branding & insurance included",
     ],
     highlighted: false,
     guestCount: "300-1000 guests",
@@ -165,7 +151,7 @@ export default function GameRentalPackagesPage() {
                 delay={index * 100}
               >
                 <div
-                  className={`relative rounded-lg overflow-hidden transition-all duration-300 h-full flex flex-col ${
+                  className={`relative rounded-lg overflow-hidden transition-all duration-300 flex flex-col ${
                     pkg.highlighted
                       ? "bg-accent text-white shadow-2xl scale-105 md:scale-110"
                       : "bg-white border-2 border-gray-200 hover:border-accent hover:shadow-xl"
@@ -177,7 +163,7 @@ export default function GameRentalPackagesPage() {
                     </div>
                   )}
 
-                  <div className="p-8 flex-grow flex flex-col">
+                  <div className="p-6 flex flex-col">
                     {/* Package Name */}
                     <h3
                       className={`text-2xl font-bold mb-2 ${
@@ -216,7 +202,7 @@ export default function GameRentalPackagesPage() {
 
                     {/* Description */}
                     <p
-                      className={`mb-6 text-sm ${
+                      className={`mb-4 text-sm ${
                         pkg.highlighted ? "text-gray-100" : "text-textGray"
                       }`}
                     >
@@ -224,7 +210,7 @@ export default function GameRentalPackagesPage() {
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-3 mb-8 flex-grow">
+                    <ul className="space-y-2 mb-6">
                       {pkg.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
                           <svg
